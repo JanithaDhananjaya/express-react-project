@@ -1,57 +1,93 @@
-Express-React Project
+# Express-React Project
 
-Setup Instructions
+This project consists of an Express.js backend and a React frontend.
 
-1. Clone the Project
+## Setup Instructions
 
+### 1. Clone the Repository
+```sh
 git clone <repository_url>
 cd express-react-project
+```
 
-2. Configure Environment Variables
+### 2. Configure Environment Variables
+Create a .env file inside the server directory with the following contents:
 
-Navigate to the server directory and create a .env file with the following configuration:
-
+```sh
 PORT=5000
 DB_HOST=localhost
 DB_USER=admin
 DB_PASSWORD=admin
 DB_NAME=sample_db
 DB_PORT=32768
+```
 
-3. Install Dependencies
+### 3. Install Dependencies
+Navigate to each directory (server and client) and install dependencies:
 
-Run the following commands inside both server and client directories:
-
+```sh
 cd server
 npm install
+
 cd ../client
 npm install
+```
 
-4. Run the Application
-
-Start the server:
-
-cd server
+### 4. Running the Application
+- Start the backend server:
+```sh
 npm run dev
+```
 
-Start the client:
-
-cd client
+- Start the frontend:
+```sh
 npm start
+```
 
-5. Access the Application
+### 5. API Endpoints
+Get Users
 
-The server will run on: http://localhost:5000
+```sh
+GET /users
+```
 
-The client will run on: http://localhost:3000
+Fetches all users from the database.
 
-Notes
+Create User
+```sh
+POST /users
+```
 
-Ensure that you have Node.js and npm installed.
+Request Body:
+```sh
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "age": 30,
+  "city": "New York"
+}
+```
 
-The .env file is required for the server to connect to the database.
+Folder Structure
+```sh
+express-react-project/
+│── client/      # React Frontend
+│── server/      # Express Backend
+│── README.md    # Project Documentation
+```
 
-The server runs using nodemon for auto-restarts during development.
+Technologies Used
+- Node.js
+- Express.js
+- MySQL
+- React.js
+- Tailwind CSS
 
-Happy Coding! 🚀
+## 🎯 Notes
+Ensure MySQL is running before starting the backend.
+Update .env variables based on your local setup. </br>
+#### Happy Coding! 🚀
+
+
+
 
